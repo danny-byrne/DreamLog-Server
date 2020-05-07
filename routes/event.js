@@ -35,7 +35,7 @@ router.route('/update').post((req, res) => {
       event.username = req.body.username;
       event.description = req.body.description;
       event.event = req.body.event;
-      event.date = Date.parse(req.body.date);
+      event.date = req.body.date;
 
       event.save()
         .then(() => res.json('Exercise updated!'))
